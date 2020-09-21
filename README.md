@@ -1,19 +1,22 @@
-![Hopscotch](https://github.com/myriadmobile/hopscotch/raw/master/res/hopscotch_banner.png)
 
 Introduction
 -------
+BetterPath is a fork of the ![Hopscotch](https://github.com/myriadmobile/hopscotch/raw/master/res/hopscotch_banner.png) library, which brings a pure JVM implementation of the android.graphics.Path class, instead of relying on the SKIA library supplied by the Android Framework at runtime (and therefore only available on certain API levels).
+BetterPath improves upon Hopscotch by adding operations export and import functionality to the BetterPath class.
 
 Features
 -------
++ Operations Import and Export
 + Implements Serializable
 + Implements Parcelable
 + Save Paths to storage for later
 
 Usage
 -------
-Wherever you would normally use `Path`, just use `SerializablePath` instead. Feel free to pass it
+Wherever you would normally use `Path`, just use `BetterPath` instead. Feel free to pass it
 around in Intents or Bundles or write it out to disk. And when you actually need an instance of
-`Path`, call the `makePath()` method and it will build you one.
+`Path`, call the `makePath()` method and it will build you one. BetterPath also supports export and import
+of the operations list that act as an instruction set for creating the Path.
 
 ```java
 public class FirstActivity extends Activity {
@@ -21,10 +24,10 @@ public class FirstActivity extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        SerializablePath path = new SerializablePath();
+        BetterPath path = new BetterPath();
 
         Intent intent = new Intent(this, SecondActivity.class);
-        //Since SerializablePath implements both Parcelable and Serializable,
+        //Since BetterPath implements both Parcelable and Serializable,
         //    we need to specify
         intent.putExtra("path", (Parcelable) path);
         startActivity(intent);
@@ -37,7 +40,7 @@ public class SecondActivity extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        SerializablePath path = getIntent().getParcelableExtra("path");
+        BetterPath path = getIntent().getParcelableExtra("path");
         Path realPath = path.makePath();
     }
 }
@@ -48,27 +51,16 @@ Documentation
 
 Dependencies
 -----
-Hopscotch is on Maven Central! Simply add the following line into your build.gradle file. Remember to update the version number properly.
+BetterPath is on Maven Central! Simply add the following line into your build.gradle file. Remember to update the version number properly.
 ```
-    compile 'com.myriadmobile.library:hopscotch:X.X.X'
+    compile 'com.tylereastman.library:betterpath:X.X.X'
 ```
-
-Bugs and Feedback
--------
-Have you found a bug? We'd sincerely appreciate an issue opened with as much detail as possible about the problem. Additionally, if you have a rad idea for a feature, tweak, or configurable aspect, create an issue! We'd love to hear from you. Fair warning: we may not agree the feature or tweak is a rad idea and close the issue, in which case you should maintain your own fork with your own changes.
-
-Contributors
--------
-### Lead
-[dandc87](https://github.com/dandc87)
-
-Would you like to contribute? Fork us and send a pull request! Be sure to checkout our issues first.
 
 FAQ
 -------
-> Why Hopscotch?
+> Why BetterPath?
 
-The way Hopscotch works is basically recording every move that extends the path. Each step is discrete and iterable, much like a hopscotch court.
+BetterPath is forked from Hopscotch. The way that Hopscotch works is basically recording every move that extends the path. Each step is discrete and iterable, much like a hopscotch court.
 
 
 ![Hopscotch](https://github.com/myriadmobile/hopscotch/raw/master/res/hopscotch.png)

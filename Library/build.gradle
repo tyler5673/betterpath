@@ -1,39 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+apply from: 'maven-push.gradle'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
-        //applicationId "com.myriadmobile.library.hopscotch"
         minSdkVersion 25
         targetSdkVersion 26
-        versionCode 3
-        versionName "0.9.4"
+        versionCode 1
+        versionName "0.0.1"
     }
-}
-
-//
-// Below code was adapted from
-// https://github.com/DeployGate/deploygate-android-sdk
-//
-android.libraryVariants.all { variant ->
-    def name = variant.buildType.name
-    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
-        return; // Skip debug builds.
-    }
-    def task = project.tasks.create "jar${name.capitalize()}", Jar
-    task.dependsOn variant.javaCompile
-    task.from variant.javaCompile.destinationDir
-    artifacts.add('archives', task)
-}
-
-task androidJar(type: Jar) {
-    from android.sourceSets.main.java
-}
-
-// central upload
-if(gradle.startParameter.taskNames.contains('uploadArchives')) {
-    apply from: 'build.publish.gradle'
 }

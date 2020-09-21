@@ -2,22 +2,16 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.myriadmobile.library.hopscotch.example"
         minSdkVersion 25
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
-    buildTypes {
-        release {
-        }
-    }
 }
 
 dependencies {
-    //compile project(':Library')
-    compile 'com.myriadmobile.library:hopscotch:0.9.4'
+    implementation project(':Library')
 }

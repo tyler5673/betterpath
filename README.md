@@ -1,7 +1,7 @@
 
 Introduction
 -------
-BetterPath is a fork of the ![Hopscotch](https://github.com/myriadmobile/hopscotch/raw/master/res/hopscotch_banner.png) library, which brings a pure JVM implementation of the android.graphics.Path class, instead of relying on the SKIA library supplied by the Android Framework at runtime (and therefore only available on certain API levels).
+BetterPath is a fork of the Hopscotch library, which brings a pure JVM implementation of the android.graphics.Path class, instead of relying on the SKIA library supplied by the Android Framework at runtime (and therefore only available on certain API levels).
 BetterPath improves upon Hopscotch by adding operations export and import functionality to the BetterPath class.
 
 Features
@@ -69,8 +69,6 @@ License
 -------
 
 The MIT License (MIT)
-
-Copyright (c) 2014 Myriad Mobile, www.myriadmobile.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

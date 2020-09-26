@@ -31,7 +31,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#addRect(android.graphics.RectF, android.graphics.Path.Direction)
  */
-class AddRectOp extends AbstractPathOp {
+public class AddRectOp extends AbstractPathOp {
 
     private final RectF rect;
     private final Path.Direction dir;

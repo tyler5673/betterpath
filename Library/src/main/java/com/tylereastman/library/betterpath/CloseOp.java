@@ -30,7 +30,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#close()
  */
-class CloseOp extends AbstractPathOp {
+public class CloseOp extends AbstractPathOp {
 
     public CloseOp(Parcel parcel) {
         super(parcel);

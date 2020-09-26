@@ -31,7 +31,7 @@ import android.os.Parcel;
 /**
  * @see Path#addOval(android.graphics.RectF, android.graphics.Path.Direction)
  */
-class AddOvalOp extends AbstractPathOp {
+public class AddOvalOp extends AbstractPathOp {
 
     private final RectF oval;
     private final Path.Direction dir;

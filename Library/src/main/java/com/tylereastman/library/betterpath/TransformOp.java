@@ -31,7 +31,7 @@ import android.os.Parcel;
 /**
  * @see Path#transform(android.graphics.Matrix)
  */
-class TransformOp extends AbstractPathOp {
+public class TransformOp extends AbstractPathOp {
 
     private final SerializableMatrix matrix;
 

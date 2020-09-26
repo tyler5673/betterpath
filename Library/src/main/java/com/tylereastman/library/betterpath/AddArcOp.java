@@ -31,7 +31,7 @@ import android.os.Parcel;
 /**
  * @see Path#addArc(android.graphics.RectF, float, float)
  */
-class AddArcOp extends AbstractPathOp {
+public class AddArcOp extends AbstractPathOp {
     private final RectF oval;
     private final float startAngle;
     private final float sweepAngle;

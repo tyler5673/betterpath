@@ -30,7 +30,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#moveTo(float, float)
  */
-class MoveToOp extends AbstractPathOp {
+public class MoveToOp extends AbstractPathOp {
 
     private final float x;
     private final float y;

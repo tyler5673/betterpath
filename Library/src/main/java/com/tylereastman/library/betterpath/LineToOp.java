@@ -30,7 +30,7 @@ import android.os.Parcel;
 /**
  * @see Path#lineTo(float, float)
  */
-class LineToOp extends AbstractPathOp {
+public class LineToOp extends AbstractPathOp {
 
     private final float x;
     private final float y;

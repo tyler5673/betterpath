@@ -31,7 +31,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#addRoundRect(android.graphics.RectF, float, float, android.graphics.Path.Direction)
  */
-class AddRoundRectXYOp extends AbstractPathOp {
+public class AddRoundRectXYOp extends AbstractPathOp {
 
     private final RectF rect;
     private final float rx;

@@ -35,7 +35,7 @@ import java.util.Arrays;
  * {@link java.io.Serializable} and {@link android.os.Parcelable } version
  * of {@link android.graphics.Matrix}
  */
-public class SerializableMatrix implements Serializable, Parcelable {
+public public class SerializableMatrix implements Serializable, Parcelable {
 
     private float[] values;
 

@@ -33,7 +33,7 @@ import java.util.Arrays;
 /**
  * @see android.graphics.Path#addRoundRect(android.graphics.RectF, float[], android.graphics.Path.Direction)
  */
-class AddRoundRectOp extends AbstractPathOp {
+public class AddRoundRectOp extends AbstractPathOp {
 
     private final RectF rect;
     private float[] radii;

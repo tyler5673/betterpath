@@ -30,7 +30,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#offset(float, float)
  */
-class OffsetOp extends AbstractPathOp {
+public class OffsetOp extends AbstractPathOp {
 
     private final float dx;
     private final float dy;

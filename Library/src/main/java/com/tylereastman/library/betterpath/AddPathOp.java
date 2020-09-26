@@ -33,7 +33,7 @@ import android.os.Parcel;
  *
  * @see android.graphics.Path#addPath(android.graphics.Path)
  */
-class AddPathOp extends AbstractPathOp {
+public class AddPathOp extends AbstractPathOp {
 
     private final BetterPath sPath;
     private final Float dx;

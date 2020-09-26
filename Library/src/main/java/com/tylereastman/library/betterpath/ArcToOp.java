@@ -31,7 +31,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#arcTo(android.graphics.RectF, float, float)
  */
-class ArcToOp extends AbstractPathOp {
+public class ArcToOp extends AbstractPathOp {
 
     private final RectF oval;
     private final float startAngle;

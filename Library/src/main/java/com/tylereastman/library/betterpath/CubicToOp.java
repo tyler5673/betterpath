@@ -30,7 +30,7 @@ import android.os.Parcel;
 /**
  * @see android.graphics.Path#cubicTo(float, float, float, float, float, float)
  */
-class CubicToOp extends AbstractPathOp {
+public class CubicToOp extends AbstractPathOp {
 
     private final float x1;
     private final float y1;

@@ -32,8 +32,8 @@ import android.os.Parcel;
  */
 public class MoveToOp extends AbstractPathOp {
 
-    private final float x;
-    private final float y;
+    public final float x;
+    public final float y;
     private final Boolean r;
 
     public MoveToOp(float x, float y) {
@@ -71,6 +71,14 @@ public class MoveToOp extends AbstractPathOp {
         else {
             path.rMoveTo(x, y);
         }
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
     }
 
     @Override

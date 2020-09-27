@@ -63,6 +63,14 @@ public class LineToOp extends AbstractPathOp {
         return AbstractPathOp.LINE_TO_OP;
     }
 
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
     @Override
     void applyToPath(Path path) {
         if(r == null) {

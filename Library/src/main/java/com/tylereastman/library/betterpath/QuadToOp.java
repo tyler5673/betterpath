@@ -120,4 +120,20 @@ public class QuadToOp extends AbstractPathOp {
         result = 31 * result + Float.floatToIntBits(y2);
         return result;
     }
+
+    public float getX1() {
+        return x1;
+    }
+
+    public float getY1() {
+        return y1;
+    }
+
+    public float getX2() {
+        return x2;
+    }
+
+    public float getY2() {
+        return y2;
+    }
 }
